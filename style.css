@@ -1,8 +1,3 @@
-
-/* ==========================================
-   1. BASIC SETTINGS
-========================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -30,11 +25,6 @@ body.light-theme {
     --nav-bg: rgba(248, 251, 255, 0.85);
 }
 
-
-/* ==========================================
-   2. BODY AND BACKGROUNDS
-========================================== */
-
 body {
     font-family: 'Poppins', sans-serif;
     background:
@@ -49,8 +39,6 @@ body {
 
     overflow-x: hidden;
 }
-
-/* LIGHT MODE BACKGROUND */
 
 body.light-theme {
     background:
@@ -88,11 +76,6 @@ button {
     font-family: inherit;
     cursor: pointer;
 }
-
-
-/* ==========================================
-   3. NAVBAR
-========================================== */
 
 header {
     position: sticky;
@@ -166,11 +149,6 @@ header {
 .menu-btn {
     display: none;
 }
-
-
-/* ==========================================
-   4. HOME SECTION
-========================================== */
 
 .home {
     min-height: 90vh;
@@ -280,11 +258,6 @@ header {
     transform: translateY(-5px);
 }
 
-
-/* ==========================================
-   5. PROFILE IMAGE
-========================================== */
-
 .home-image {
     flex-shrink: 0;
 }
@@ -314,10 +287,6 @@ body.light-theme .image-circle {
 }
 
 
-/* ==========================================
-   6. COMMON SECTION DESIGN
-========================================== */
-
 .section {
     padding: 100px 8%;
 }
@@ -343,11 +312,6 @@ body.light-theme .skills,
 body.light-theme .contact {
     background: transparent;
 }
-
-
-/* ==========================================
-   7. ABOUT SECTION
-========================================== */
 
 .about {
     background: rgba(21, 31, 50, 0.70);
@@ -397,10 +361,6 @@ body.light-theme .contact {
     color: var(--text);
 }
 
-
-/* ==========================================
-   8. EDUCATION SECTION
-========================================== */
 
 .education-container {
     max-width: 1100px;
@@ -454,12 +414,6 @@ body.light-theme .contact {
     font-size: 13px;
 }
 
-
-/* ==========================================
-   9. SKILLS SECTION
-   AUTOMATIC HORIZONTAL SCROLLING
-========================================== */
-
 .skills {
     overflow: hidden;
     background: rgba(21, 31, 50, 0.70);
@@ -472,7 +426,6 @@ body.light-theme .contact {
     letter-spacing: 0;
 }
 
-/* SCROLLING VIEWPORT */
 
 .skills-marquee {
     width: 100%;
@@ -500,8 +453,6 @@ body.light-theme .contact {
     );
 }
 
-/* SCROLLING TRACK */
-
 .skills-track {
     display: flex;
     align-items: stretch;
@@ -512,13 +463,11 @@ body.light-theme .contact {
     animation: skills-scroll 40s linear infinite;
 }
 
-/* PAUSE ON HOVER */
 
 .skills-marquee:hover .skills-track {
     animation-play-state: paused;
 }
 
-/* VERTICAL RECTANGLE CARDS */
 
 .skill-card {
     flex: 0 0 200px;
@@ -546,8 +495,6 @@ body.light-theme .contact {
         box-shadow 0.3s ease;
 }
 
-/* CARD HOVER */
-
 .skill-card:hover {
     transform: translateY(-8px);
 
@@ -556,15 +503,12 @@ body.light-theme .contact {
     box-shadow: 0 15px 35px rgba(56, 189, 248, 0.18);
 }
 
-/* SKILL ICON */
-
 .skill-card i {
     font-size: 45px;
     color: var(--accent);
     margin-bottom: 28px;
 }
 
-/* SKILL TITLE */
 
 .skill-card h3 {
     font-size: 19px;
@@ -573,15 +517,12 @@ body.light-theme .contact {
     line-height: 1.4;
 }
 
-/* SKILL CATEGORY */
 
 .skill-card span {
     font-size: 12px;
     color: var(--muted);
     line-height: 1.5;
 }
-
-/* INFINITE SCROLL ANIMATION */
 
 @keyframes skills-scroll {
     from {
@@ -592,8 +533,6 @@ body.light-theme .contact {
         transform: translateX(-50%);
     }
 }
-
-/* LIGHT MODE CARDS */
 
 body.light-theme .skill-card {
     background: rgba(255, 255, 255, 0.90);
@@ -609,11 +548,6 @@ body.light-theme .skill-card {
     font-size: 12px;
     margin-top: 10px;
 }
-
-
-/* ==========================================
-   10. PROJECTS SECTION
-========================================== */
 
 .projects-container {
     max-width: 1100px;
@@ -681,10 +615,6 @@ body.light-theme .skill-card {
 }
 
 
-/* ==========================================
-   11. CONTACT SECTION
-========================================== */
-
 .contact {
     background: rgba(21, 31, 50, 0.70);
     text-align: center;
@@ -731,10 +661,6 @@ body.light-theme .skill-card {
 }
 
 
-/* ==========================================
-   12. FOOTER
-========================================== */
-
 footer {
     padding: 28px 5%;
 
@@ -756,10 +682,6 @@ footer a {
 }
 
 
-/* ==========================================
-   13. LIGHT MODE CARD DESIGN
-========================================== */
-
 body.light-theme .education-card,
 body.light-theme .project-card,
 body.light-theme .contact-links a {
@@ -778,10 +700,6 @@ body.light-theme .project-card > a {
     color: var(--accent);
 }
 
-
-/* ==========================================
-   14. TABLET RESPONSIVENESS
-========================================== */
 
 @media (max-width: 1000px) {
 
@@ -803,11 +721,6 @@ body.light-theme .project-card > a {
     }
 
 }
-
-
-/* ==========================================
-   15. MOBILE RESPONSIVENESS
-========================================== */
 
 @media (max-width: 700px) {
 
@@ -847,8 +760,6 @@ body.light-theme .project-card > a {
     }
 
 
-    /* HOME */
-
     .home {
         flex-direction: column-reverse;
         text-align: center;
@@ -881,8 +792,6 @@ body.light-theme .project-card > a {
     }
 
 
-    /* ABOUT */
-
     .about-content {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -893,14 +802,10 @@ body.light-theme .project-card > a {
     }
 
 
-    /* EDUCATION */
-
     .education-container {
         grid-template-columns: 1fr;
     }
 
-
-    /* SKILLS */
 
     .skills-track {
         gap: 16px;
@@ -923,14 +828,9 @@ body.light-theme .project-card > a {
     }
 
 
-    /* PROJECTS */
-
     .projects-container {
         grid-template-columns: 1fr;
     }
-
-
-    /* CONTACT */
 
     .contact-links {
         flex-direction: column;
@@ -941,9 +841,6 @@ body.light-theme .project-card > a {
         width: 100%;
         max-width: 280px;
     }
-
-
-    /* GENERAL */
 
     .section {
         padding: 70px 6%;
@@ -960,10 +857,6 @@ body.light-theme .project-card > a {
 
 }
 
-
-/* ==========================================
-   16. SMALL MOBILE DEVICES
-========================================== */
 
 @media (max-width: 380px) {
 
@@ -985,11 +878,6 @@ body.light-theme .project-card > a {
     }
 
 }
-
-
-/* ==========================================
-   17. ACCESSIBILITY
-========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 

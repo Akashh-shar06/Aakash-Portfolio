@@ -1,8 +1,3 @@
-
-/* ==========================================
-   1. MOBILE NAVIGATION
-========================================== */
-
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -16,11 +11,6 @@ menuBtn.addEventListener("click", () => {
     icon.classList.toggle("fa-xmark");
 
 });
-
-
-/* ==========================================
-   2. CLOSE MOBILE MENU AFTER CLICK
-========================================== */
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
@@ -37,17 +27,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 });
 
-
-/* ==========================================
-   3. DARK MODE / LIGHT MODE
-========================================== */
-
 const themeToggle = document.getElementById("themeToggle");
 
 const themeIcon = themeToggle.querySelector("i");
-
-
-// Load saved theme
 
 const savedTheme = localStorage.getItem("portfolio-theme");
 
@@ -57,8 +39,6 @@ if (savedTheme === "light") {
 
 }
 
-
-// Update theme icon
 
 function updateThemeIcon() {
 
@@ -74,13 +54,8 @@ function updateThemeIcon() {
 
 }
 
-
-// Set initial icon
-
 updateThemeIcon();
 
-
-// Change theme when button is clicked
 
 themeToggle.addEventListener("click", () => {
 
@@ -92,21 +67,12 @@ themeToggle.addEventListener("click", () => {
             : "dark";
 
 
-    // Save selected theme
-
     localStorage.setItem("portfolio-theme", currentTheme);
 
-
-    // Change icon
 
     updateThemeIcon();
 
 });
-
-
-/* ==========================================
-   4. TYPING ANIMATION
-========================================== */
 
 const words = [
 
@@ -130,9 +96,6 @@ function typeEffect() {
 
     const currentWord = words[wordIndex];
 
-
-    // Add or remove characters
-
     if (deleting) {
 
         charIndex--;
@@ -143,17 +106,11 @@ function typeEffect() {
 
     }
 
-
-    // Display text
-
     typingElement.textContent =
         currentWord.substring(0, charIndex);
 
 
     let speed = deleting ? 60 : 100;
-
-
-    // When word is completed
 
     if (!deleting && charIndex === currentWord.length) {
 
@@ -163,8 +120,6 @@ function typeEffect() {
 
     }
 
-
-    // When word is deleted
 
     else if (deleting && charIndex === 0) {
 
@@ -176,14 +131,8 @@ function typeEffect() {
 
     }
 
-
-    // Repeat typing animation
-
     setTimeout(typeEffect, speed);
 
 }
-
-
-// Start typing animation
 
 typeEffect();
